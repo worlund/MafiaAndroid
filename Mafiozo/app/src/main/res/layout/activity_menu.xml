@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mafia.mafia.MenuActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="createRoom"
+        android:text="@string/button_create_room"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/rooms_list"
+        app:layout_constraintLeft_toRightOf="@+id/update_button"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/accuse"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/roomsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rooms"
+        android:textSize="32dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="46dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/accuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="connectByPassword"
+        android:text="@string/join_by_pw"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/err_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="27dp"
+        app:layout_constraintLeft_toRightOf="@+id/roomsHeader"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <ListView
+        android:id="@+id/rooms_list"
+        android:layout_width="320dp"
+        android:layout_height="370dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomsHeader" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="refreshList"
+        android:text="@string/update"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,31 @@
+{
+  "name": "mafia",
+  "version": "1.0.0",
+  "description": "Mafia as an app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodejs app/index.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gits-15.sys.kth.se:intnet17/pettea-projekt.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "socket"
+  ],
+  "author": "Petter Andersson and Robert Wörlund",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "express-socket.io-session": "^1.3.2",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2",
+    "socket.io": "^1.7.3"
+  }
+}

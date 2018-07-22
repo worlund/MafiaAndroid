@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mafia.mafia.GameActivity">
+
+    <TextView
+        android:id="@+id/DayNight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeLeftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timeLeft"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DayNight"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/DayNight"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="0.00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/timeLeftText"
+        app:layout_constraintLeft_toRightOf="@+id/timeLeftText"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/listPlayerText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/listPlayers"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+    <ListView
+        android:id="@+id/list_players"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/listPlayerText" />
+
+    <Button
+        android:id="@+id/voteNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/vote_to_night"
+        android:layout_marginTop="-19dp"
+        app:layout_constraintTop_toBottomOf="@+id/voteDay"
+        app:layout_constraintLeft_toRightOf="@+id/toggleChat"
+        android:layout_marginLeft="47dp" />
+
+    <ListView
+        android:id="@+id/game_msg"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleChat" />
+
+    <Button
+        android:id="@+id/accuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="accuse"
+        android:text="@string/accuse"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hideShow" />
+
+    <EditText
+        android:id="@+id/enter_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/message"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_msg" />
+
+    <Button
+        android:id="@+id/send_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="8dp"
+        android:onClick="sendMessage"
+        android:text="@string/send"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enter_msg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/enter_msg"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/roleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/role"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/DayNight" />
+
+    <TextView
+
+        android:id="@+id/role"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="127dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/roleText"
+        app:layout_constraintLeft_toRightOf="@+id/roleText" />
+
+    <Button
+        android:id="@+id/hideShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hide"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/instruct" />
+
+    <TextView
+        android:id="@+id/instructionsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/instructions"
+        android:visibility="visible"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/roleText"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/rolesInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="showRoleInfoDialog"
+        android:text="@string/rolesInfo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hideShow"
+        app:layout_constraintLeft_toRightOf="@+id/hideShow"
+        app:layout_constraintRight_toLeftOf="@+id/list_players"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/roleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="66dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="roleFunctionality"
+        android:text="@string/roleButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/instructionsText"
+        app:layout_constraintRight_toLeftOf="@+id/listPlayerText"
+        app:layout_constraintTop_toBottomOf="@+id/timeLeftText" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Save Game"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/accuse"
+        app:layout_constraintLeft_toRightOf="@+id/accuse" />
+
+    <Button
+        android:id="@+id/voteDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/vote_more_day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accuse" />
+
+    <Button
+        android:id="@+id/toggleChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="@string/hideChat"
+        app:layout_constraintTop_toBottomOf="@+id/voteDay"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/instruct"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/list_players"
+        app:layout_constraintTop_toBottomOf="@+id/roleButton" />
+</android.support.constraint.ConstraintLayout>
